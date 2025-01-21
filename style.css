@@ -305,6 +305,25 @@ footer .icons {
   display: flex;
   gap: 20px;
 }
+footer a {
+    width: 55px;
+    height: 55px;
+    color: #fff;
+  
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  footer i{
+    font-size: 2rem;
+  }
+footer a:hover i,
+footer a:active i {
+  color: hsl(215, 81%, 68%);
+}
 footer form{
     display: flex;
     align-items: center;
