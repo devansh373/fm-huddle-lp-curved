@@ -101,7 +101,7 @@ header .right svg {
 }
 
 .data {
-  height: 40vh;
+  height: 60vh;
   display: flex;
 }
 .data > div {
@@ -132,6 +132,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  position: relative;
   /* padding: 3% 11%; */
 }
 main h2 {
@@ -182,9 +183,9 @@ main .one {
 main .one::after {
   content: "";
   width: 100%;
-  height: 150px;
+  height: 10vw;
   position: absolute;
-  bottom: -35%;
+  bottom: -8vw;
   background-image: url(./images/bg-section-bottom-desktop-1.svg);
   background-position: bottom;
   background-size: contain;
@@ -213,14 +214,30 @@ main .three {
 main .three::after {
   content: "";
   width: 100%;
-  height: 150px;
+  height: 11vw;
   position: absolute;
-  top: -35%;
+  top: -10vw;
   background-image: url(./images/bg-section-top-desktop-2.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top;
   z-index: 1;
+}
+main::after{
+  content: "";
+  width: 100%;
+  height: 142px;
+  height: 10.99vw;
+  position: absolute;
+  /* top: -32%; */
+  bottom: 0;
+  left: 0;
+  background-image: url(./images/bg-footer-top-desktop.svg);
+  background-size: contain;
+  background-size: 104%;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 2;
 }
 
 .popup {
@@ -254,7 +271,7 @@ footer {
   color: white;
   position: relative;
 }
-footer::before {
+/* footer::before {
     content: "";
     width: 100%;
     height: 169px;
@@ -266,7 +283,7 @@ footer::before {
     background-repeat: no-repeat;
     background-position: top;
     z-index: 1;
-  }
+  } */
 footer > div {
   display: flex;
   flex-direction: column;
@@ -328,6 +345,7 @@ footer form{
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 footer input{
     padding: 12px;
@@ -360,4 +378,88 @@ footer input[type="submit"]{
 input[type="submit"]:hover,
 input[type="submit"]:active {
   background-color: hsl(322, 92%, 72%);
+}
+
+@media (max-width:1074px){
+  header .left p{
+    padding: 0 20%;
+  }
+}
+
+@media (max-width:700px){
+  header .one{
+    margin-bottom: 50px;
+    padding: 4% 2%;
+  }
+  header .left{
+    gap: 60px;
+  }
+  .data{
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40vh;
+  }
+  .data>div{
+    align-items: flex-start;
+  }
+  main .threeDivs>div{
+    flex-direction: column-reverse;
+    align-items: center;
+    height: auto;
+  }
+  main .threeDivs>div>div{
+    width: 100%;
+    height: 40vh;
+  }
+  main .threeDivs .two{
+    flex-direction: column;
+  }
+  main p{
+    font-size: 14px;
+  }
+  footer{
+    flex-direction: column-reverse;
+    align-items: center;
+    height: auto;
+    gap: 50px;
+    padding-bottom: 40px;
+  }
+  footer>div{
+    width: 100% !important;
+    gap: 6vh !important;
+  }
+  footer form{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .one div{
+    width: 90%;
+  }
+  footer .two{
+    margin-left: 0;
+  }
+  footer .two p{
+    padding-right: 10%;
+  }
+}
+@media (max-width:500px){
+  header .left h1 {
+    font-size: 1.9rem;
+}
+header .left p{
+  padding: 0 5%;
+  font-size: 1rem;
+}
+header .two{
+  gap: 90px;
+}
+header .one svg g{
+  transform: scale(0.9);
+}
+header .one span{
+  padding: 4px 30px;
+}
+.data > div{
+  width: 63%;
+}
 }
